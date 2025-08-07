@@ -1,0 +1,104 @@
+{
+  "common": {
+    "loading": "Загрузка...",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "view": "Просмотр",
+    "search": "Поиск",
+    "filter": "Фильтр",
+    "export": "Экспорт",
+    "import": "Импорт",
+    "refresh": "Обновить",
+    "back": "Назад",
+    "next": "Далее",
+    "previous": "Предыдущий",
+    "submit": "Отправить",
+    "close": "Закрыть"
+  },
+  "auth": {
+    "login": "Вход",
+    "logout": "Выход",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "loginButton": "Войти",
+    "invalidCredentials": "Неверный email или пароль",
+    "welcome": "Добро пожаловать в Нафру"
+  },
+  "navigation": {
+    "dashboard": "Панель управления",
+    "orders": "Заказы",
+    "shipments": "Отгрузки",
+    "customers": "Клиенты",
+    "suppliers": "Поставщики",
+    "documents": "Документы",
+    "settings": "Настройки"
+  },
+  "dashboard": {
+    "title": "Панель управления",
+    "activeOrders": "Активные заказы",
+    "upcomingShipments": "Предстоящие отгрузки",
+    "pendingDocuments": "Ожидающие документы",
+    "totalRevenue": "Общая выручка",
+    "overview": "Обзор"
+  },
+  "orders": {
+    "title": "Заказы",
+    "newOrder": "Новый заказ",
+    "orderNumber": "Номер заказа",
+    "customer": "Клиент",
+    "status": "Статус",
+    "totalAmount": "Общая сумма",
+    "createdDate": "Дата создания",
+    "actions": "Действия",
+    "pending": "Ожидает",
+    "confirmed": "Подтвержден",
+    "processing": "В обработке",
+    "shipped": "Отправлен",
+    "delivered": "Доставлен",
+    "cancelled": "Отменен"
+  },
+  "shipments": {
+    "title": "Отгрузки",
+    "newShipment": "Новая отгрузка",
+    "containerNumber": "Номер контейнера",
+    "vessel": "Судно",
+    "portOfLoading": "Порт загрузки",
+    "portOfDischarge": "Порт разгрузки",
+    "etd": "Дата отправления",
+    "eta": "Дата прибытия",
+    "carrier": "Перевозчик",
+    "preparing": "Подготовка",
+    "loaded": "Загружен",
+    "inTransit": "В пути",
+    "arrived": "Прибыл"
+  },
+  "customers": {
+    "title": "Клиенты",
+    "newCustomer": "Новый клиент",
+    "name": "Имя",
+    "company": "Компания",
+    "phone": "Телефон",
+    "address": "Адрес",
+    "city": "Город",
+    "country": "Страна"
+  },
+  "documents": {
+    "title": "Документы",
+    "generateDocument": "Создать документ",
+    "commercialInvoice": "Коммерческий счет",
+    "certificateOfOrigin": "Сертификат происхождения",
+    "phytosanitaryCertificate": "Фитосанитарный сертификат",
+    "packingList": "Упаковочный лист",
+    "billOfLading": "Коносамент",
+    "download": "Скачать"
+  },
+  "products": {
+    "citrus": "Цитрусовые",
+    "grapes": "Виноград",
+    "mangoes": "Манго",
+    "dates": "Финики",
+    "other": "Другое"
+  }
+}
