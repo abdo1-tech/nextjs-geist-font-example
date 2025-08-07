@@ -1,0 +1,104 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Sign In",
+    "invalidCredentials": "Invalid email or password",
+    "welcome": "Welcome to Nafru"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "shipments": "Shipments",
+    "customers": "Customers",
+    "suppliers": "Suppliers",
+    "documents": "Documents",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "activeOrders": "Active Orders",
+    "upcomingShipments": "Upcoming Shipments",
+    "pendingDocuments": "Pending Documents",
+    "totalRevenue": "Total Revenue",
+    "overview": "Overview"
+  },
+  "orders": {
+    "title": "Orders",
+    "newOrder": "New Order",
+    "orderNumber": "Order Number",
+    "customer": "Customer",
+    "status": "Status",
+    "totalAmount": "Total Amount",
+    "createdDate": "Created Date",
+    "actions": "Actions",
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "processing": "Processing",
+    "shipped": "Shipped",
+    "delivered": "Delivered",
+    "cancelled": "Cancelled"
+  },
+  "shipments": {
+    "title": "Shipments",
+    "newShipment": "New Shipment",
+    "containerNumber": "Container Number",
+    "vessel": "Vessel",
+    "portOfLoading": "Port of Loading",
+    "portOfDischarge": "Port of Discharge",
+    "etd": "ETD",
+    "eta": "ETA",
+    "carrier": "Carrier",
+    "preparing": "Preparing",
+    "loaded": "Loaded",
+    "inTransit": "In Transit",
+    "arrived": "Arrived"
+  },
+  "customers": {
+    "title": "Customers",
+    "newCustomer": "New Customer",
+    "name": "Name",
+    "company": "Company",
+    "phone": "Phone",
+    "address": "Address",
+    "city": "City",
+    "country": "Country"
+  },
+  "documents": {
+    "title": "Documents",
+    "generateDocument": "Generate Document",
+    "commercialInvoice": "Commercial Invoice",
+    "certificateOfOrigin": "Certificate of Origin",
+    "phytosanitaryCertificate": "Phytosanitary Certificate",
+    "packingList": "Packing List",
+    "billOfLading": "Bill of Lading",
+    "download": "Download"
+  },
+  "products": {
+    "citrus": "Citrus Fruits",
+    "grapes": "Grapes",
+    "mangoes": "Mangoes",
+    "dates": "Dates",
+    "other": "Other"
+  }
+}
