@@ -1,0 +1,104 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "view": "عرض",
+    "search": "بحث",
+    "filter": "تصفية",
+    "export": "تصدير",
+    "import": "استيراد",
+    "refresh": "تحديث",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "close": "إغلاق"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "loginButton": "دخول",
+    "invalidCredentials": "بريد إلكتروني أو كلمة مرور غير صحيحة",
+    "welcome": "مرحباً بك في نفرو"
+  },
+  "navigation": {
+    "dashboard": "لوحة التحكم",
+    "orders": "الطلبات",
+    "shipments": "الشحنات",
+    "customers": "العملاء",
+    "suppliers": "الموردين",
+    "documents": "المستندات",
+    "settings": "الإعدادات"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "activeOrders": "الطلبات النشطة",
+    "upcomingShipments": "الشحنات القادمة",
+    "pendingDocuments": "المستندات المعلقة",
+    "totalRevenue": "إجمالي الإيرادات",
+    "overview": "نظرة عامة"
+  },
+  "orders": {
+    "title": "الطلبات",
+    "newOrder": "طلب جديد",
+    "orderNumber": "رقم الطلب",
+    "customer": "العميل",
+    "status": "الحالة",
+    "totalAmount": "المبلغ الإجمالي",
+    "createdDate": "تاريخ الإنشاء",
+    "actions": "الإجراءات",
+    "pending": "معلق",
+    "confirmed": "مؤكد",
+    "processing": "قيد المعالجة",
+    "shipped": "تم الشحن",
+    "delivered": "تم التسليم",
+    "cancelled": "ملغي"
+  },
+  "shipments": {
+    "title": "الشحنات",
+    "newShipment": "شحنة جديدة",
+    "containerNumber": "رقم الحاوية",
+    "vessel": "السفينة",
+    "portOfLoading": "ميناء التحميل",
+    "portOfDischarge": "ميناء التفريغ",
+    "etd": "موعد المغادرة",
+    "eta": "موعد الوصول",
+    "carrier": "الناقل",
+    "preparing": "قيد التحضير",
+    "loaded": "تم التحميل",
+    "inTransit": "في الطريق",
+    "arrived": "وصل"
+  },
+  "customers": {
+    "title": "العملاء",
+    "newCustomer": "عميل جديد",
+    "name": "الاسم",
+    "company": "الشركة",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "city": "المدينة",
+    "country": "البلد"
+  },
+  "documents": {
+    "title": "المستندات",
+    "generateDocument": "إنشاء مستند",
+    "commercialInvoice": "فاتورة تجارية",
+    "certificateOfOrigin": "شهادة منشأ",
+    "phytosanitaryCertificate": "شهادة صحة نباتية",
+    "packingList": "قائمة التعبئة",
+    "billOfLading": "بوليصة الشحن",
+    "download": "تحميل"
+  },
+  "products": {
+    "citrus": "الحمضيات",
+    "grapes": "العنب",
+    "mangoes": "المانجو",
+    "dates": "التمر",
+    "other": "أخرى"
+  }
+}
