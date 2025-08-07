@@ -1,0 +1,205 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
+  role      Role
+  language  String   @default("en")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  orders    Order[]
+  shipments Shipment[]
+  documents Document[]
+
+  @@map("users")
+}
+
+model Customer {
+  id          Int      @id @default(autoincrement())
+  name        String
+  email       String   @unique
+  phone       String?
+  company     String?
+  address     String?
+  city        String?
+  country     String
+  language    String   @default("ru")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  orders Order[]
+
+  @@map("customers")
+}
+
+model Supplier {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  phone     String?
+  company   String?
+  address   String?
+  city      String?
+  country   String   @default("Egypt")
+  language  String   @default("ar")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  products Product[]
+
+  @@map("suppliers")
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  category    ProductCategory
+  description String?
+  season      String?
+  quality     String?
+  pricePerKg  Float
+  currency    String   @default("EGP")
+  supplierId  Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  supplier   Supplier    @relation(fields: [supplierId], references: [id])
+  orderItems OrderItem[]
+
+  @@map("products")
+}
+
+model Order {
+  id         Int         @id @default(autoincrement())
+  orderNo    String      @unique
+  customerId Int
+  status     OrderStatus @default(PENDING)
+  totalKg    Float
+  totalPrice Float
+  currency   String      @default("USD")
+  notes      String?
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  createdBy  Int
+
+  // Relations
+  customer   Customer    @relation(fields: [customerId], references: [id])
+  user       User        @relation(fields: [createdBy], references: [id])
+  orderItems OrderItem[]
+  shipments  Shipment[]
+  documents  Document[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id        Int     @id @default(autoincrement())
+  orderId   Int
+  productId Int
+  quantity  Float
+  pricePerKg Float
+  totalPrice Float
+
+  // Relations
+  order   Order   @relation(fields: [orderId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
+
+  @@map("order_items")
+}
+
+model Shipment {
+  id            Int            @id @default(autoincrement())
+  orderId       Int
+  containerNo   String?
+  vesselName    String?
+  portOfLoading String?
+  portOfDischarge String?
+  etd           DateTime?
+  eta           DateTime?
+  carrier       String?
+  status        ShipmentStatus @default(PREPARING)
+  notes         String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  createdBy     Int
+
+  // Relations
+  order Order @relation(fields: [orderId], references: [id])
+  user  User  @relation(fields: [createdBy], references: [id])
+
+  @@map("shipments")
+}
+
+model Document {
+  id          Int          @id @default(autoincrement())
+  orderId     Int
+  type        DocumentType
+  fileName    String
+  filePath    String?
+  status      String       @default("generated")
+  generatedAt DateTime     @default(now())
+  createdBy   Int
+
+  // Relations
+  order Order @relation(fields: [orderId], references: [id])
+  user  User  @relation(fields: [createdBy], references: [id])
+
+  @@map("documents")
+}
+
+enum Role {
+  ADMIN
+  TEAM
+  BUYER
+  SUPPLIER
+}
+
+enum ProductCategory {
+  CITRUS
+  GRAPES
+  MANGOES
+  DATES
+  OTHER
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum ShipmentStatus {
+  PREPARING
+  LOADED
+  IN_TRANSIT
+  ARRIVED
+  DELIVERED
+}
+
+enum DocumentType {
+  COMMERCIAL_INVOICE
+  CERTIFICATE_OF_ORIGIN
+  PHYTOSANITARY_CERTIFICATE
+  PACKING_LIST
+  BILL_OF_LADING
+}
